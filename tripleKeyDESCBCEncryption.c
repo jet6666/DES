@@ -23,12 +23,6 @@ void tripleKeyDES_CBCEncryption(char *input,char* inputKey1,char* inputKey2,char
  char output2[8];
  char final[8];
 
-    memset(temp,0,8);
-    memset(prev,0,8);
-    memset(output,0,8);
-    memset(output2,0,8);
-    memset(final,0,8);
-
     int out_index=0;
 
  if(numBlocks == 1 && rem == 0) {
@@ -92,7 +86,6 @@ void tripleKeyDES_CBCEncryption(char *input,char* inputKey1,char* inputKey2,char
    }
    memcpy(newMessage,input,stringLength);//17
 
-
  for(i = 0;i < numBlocks ;i++) { 
     memcpy(temp,newMessage+(8*i),8);
     if(i ==0){
@@ -116,7 +109,6 @@ void tripleKeyDES_CBCEncryption(char *input,char* inputKey1,char* inputKey2,char
          out_index++;
      }
    }
-
 
 free(newMessage);
  }
