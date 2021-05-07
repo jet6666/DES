@@ -126,6 +126,16 @@ void desEncryptionPer64_return(char* message,char* key,char* ciphertext){
  char subL[17][4]; //L transformation (round function)
  char roundOutput[8];
  char finalOutput[8];//final Ouput
+
+
+    memset(pk,0,8);
+    memset(ip,0,8);
+    memset(R,0,4);
+    memset(L,0,4);
+    memset(c,0,4);
+    memset(d,0,4);
+    memset(roundOutput,0,8);
+    memset(finalOutput,0,8);
  
  initialKeyPermutation(key,pk);// initial key permutation
  initialPermutation(message,ip);// intial permutation
@@ -164,6 +174,15 @@ void desEncryptionPer64_nullReturn(char* message,char* key,char* ciphertext){
  char subL[17][4]; //L transformation (round function)
  char roundOutput[8];
  char finalOutput[8];//final Ouput
+
+    memset(pk,0,8);
+    memset(ip,0,8);
+    memset(R,0,4);
+    memset(L,0,4);
+    memset(c,0,4);
+    memset(d,0,4);
+    memset(roundOutput,0,8);
+    memset(finalOutput,0,8);
  
  initialKeyPermutation(key,pk);// initial key permutation
  initialPermutation(message,ip);// intial permutation
